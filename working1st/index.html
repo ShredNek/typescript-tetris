@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <title>Tetris Game!</title>
+  </head>
+  <style>
+    #button:hover {
+      transform: rotate(-360deg);
+      transition-duration: 600ms;
+    }
+  </style>
+  <body
+    style="
+      display: flex;
+      flex-direction: row;
+      min-width: 50vw;
+      margin: auto;
+      justify-content: center;
+    "
+  >
+    <canvas
+      id="canvas"
+      width="480"
+      height="810"
+      style="margin: 1rem; height: 90%"
+    ></canvas>
+    <div
+      style="
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      "
+    >
+      <div>
+        <h3
+          style="
+            font-size: 2.5rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            align-self: center;
+            margin: 1rem;
+          "
+        >
+          Next Shape
+        </h3>
+        <canvas
+          id="nextShapeCanvas"
+          width="278"
+          height="280"
+          style="
+            height: 12rem;
+            margin: auto;
+            margin-left: 1rem;
+            margin-top: 1rem;
+          "
+        ></canvas>
+        <canvas
+          id="scoreCanvas"
+          width="170"
+          height="100"
+          style="height: 10rem; margin: 1rem; margin-left: 0rem"
+        ></canvas>
+      </div>
+      <button
+        class="ytp-play-button ytp-button"
+        aria-label="Pause (k)"
+        onclick="resetVars()"
+        style="
+          width: 5rem;
+          border-radius: 35%;
+          background-color: #bca0dc;
+          margin: auto;
+          margin-bottom: -1rem;
+          margin-left: 0rem;
+          border: 2px;
+          border-color: white;
+        "
+      >
+        <svg viewBox="0 0 36 36" id="button">
+          <path
+            fill="white"
+            d="M 18,11 V 7 l -5,5 5,5 v -4 c 3.3,0 6,2.7 6,6 0,3.3 -2.7,6 -6,6 -3.3,0 -6,-2.7 -6,-6 h -2 c 0,4.4 3.6,8 8,8 4.4,0 8,-3.6 8,-8 0,-4.4 -3.6,-8 -8,-8 z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <img
+      id="image"
+      src="/imgs/rotations.png"
+      style="display: none; margin: auto"
+    />
+    <script src="tetrisCOMMENTED.js"></script>
+  </body>
+</html>
